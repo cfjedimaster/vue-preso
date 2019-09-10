@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<style>
+		[v-cloak] {display: none}
+		</style>
+	</head>
+	<body>
+
+		<h2>Some Form</h2>
+
+		<form id="app" @submit="checkForm" action="https://postman-echo.com/post" method="post" v-cloak>
+		
+		<p v-if="errors.length">
+			<b>Please correct the following error(s):</b>
+			<ul>
+			<li v-for="error in errors">{{ error }}</li>
+			</ul>
+		</p>
+		
+		<p>
+			<label for="name">Name<label>
+			<input type="text" name="name" id="name" v-model="name">
+		</p>
+
+		<p>
+			<label for="age">Age<label>
+			<input type="number" name="age" id="age" v-model="age" min="0">
+		</p>
+
+		<p>
+			<label for="movie">Favorite Movie<label>
+			<select name="movie" id="movie" v-model="movie">
+			<option>Star Wars</option>
+			<option>Vanilla Sky</option>
+			<option>Atomic Blonde</option>
+			</select>
+		</p>
+
+		<p>
+			<input type="submit" value="Submit">  
+		</p>
+
+		</form>
+
+		<script src="https://unpkg.com/vue"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
