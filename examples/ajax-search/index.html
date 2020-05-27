@@ -17,16 +17,14 @@
 			<button @click="search">Search</button>
 			<p/>
 
-			<div v-for="result in results" class="result">
-				<img :src="result.artworkUrl100">
-				<b>Artist:</b> {{result.artistName}}<br/>
-				<b>Track:</b> {{result.trackName}}<br/>
-				<b>Released:</b> {{result.releaseDate | formatDate}}
-				<br clear="left">
-			</div>
+			<p v-for="result in results" class="result">
+				<b>Name:</b> {{ result.name }}<br/>
+				<b>Address:</b> {{ result.street }}, {{ result.city }} {{ result.state }} {{ result.postal_code }}<br/>
+				<b>Website:</b> <a :href="result.website_url" target="_new">{{ result.website_url }}</a>
+			</p>
 
 			<div v-if="noResults">
-				Sorry, but no results were found. I blame Apple.
+				Sorry, but no results were found.
 			</div>
 
 			<div v-if="searching">

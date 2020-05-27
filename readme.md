@@ -2,7 +2,6 @@ This repository contains my slide deck (in both PPT and PDF, but I may not alway
 
 Note - the CodePen demos may be found here: <http://bit.ly/rayvuedemos>
 
-Note for Ray mostly: 
+Change Log:
 
-* Consider a shorter version for 50 minute talks
-* Consider a new API for Ajax-search
+5/26/2020: Updates for pre 3.0 era, changed ajax-search to open brewery db (but kept ajax-search-2 as is). ToDo, fix master-detail issue w/ Star Wars API.
