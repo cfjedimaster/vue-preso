@@ -10,7 +10,10 @@ const app = new Vue({
 		search:function() {
 			this.results = [];
 			this.searching = true;
-			fetch(`https://api.openbrewerydb.org/breweries/search?query=${encodeURIComponent(this.term)}`)
+			// api stopped working
+			//fetch(`https://api.openbrewerydb.org/breweries/search?query=${encodeURIComponent(this.term)}`)
+			fetch(`https://api.openbrewerydb.org/breweries?by_name=${encodeURIComponent(this.term)}`)
+		
 			.then(res => res.json())
 			.then(res => {
 				this.searching = false;
